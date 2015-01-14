@@ -37,24 +37,15 @@ attribute 'memcached/memory',
   :required => 'optional',
   :recipes => ['rsc_memcached::default']
 
-attribute 'memcached/listen',
-  :display_name => 'Memcached Listen IP',
-  :description => 'IP address for memcache to listen on, defaults to 0.0.0.0.',
-  :default => '0.0.0.0',
-  :required => 'optional',
-  :recipes => ['rsc_memcached::default']
-
 attribute 'memcached/port',
   :display_name => 'Memcached Listen Port',
   :description => 'TCP port for memcached to listen on, defaults to 11211',
-  :default => '11211',
   :required => 'required',
   :recipes => ['rsc_memcached::default']
 
 attribute 'memcached/udp_port',
   :display_name => 'Memcached udp_port',
   :description => 'UDP port for memcached to listen on, defaults to 11211',
-  :default => '11211',
   :required => 'required',
   :recipes => ['rsc_memcached::default']
 
