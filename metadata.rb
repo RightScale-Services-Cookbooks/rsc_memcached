@@ -13,7 +13,7 @@ depends 'application' ,'~> 4.1.4'
 depends 'collectd', '~> 1.1.0'
 depends 'machine_tag', '~> 1.0.8'
 depends 'memcached', '~> 1.7.2'
-depends 'sys_dns', '~> 13.5.1'
+
 
 recipe 'rsc_memcached::default', 'Installs/configures a memcached server'
 recipe 'rsc_memcached::tags', 'Sets up tags for finding the memcached server'

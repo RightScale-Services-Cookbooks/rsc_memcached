@@ -7,8 +7,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.   
   #config.vm.box = "opscode-ubuntu-12.04"
-  #config.vm.box = "opscode-ubuntu-14.04"
-  config.vm.box ="opscode-centos-6.6"
+  config.vm.box = "opscode-ubuntu-14.04"
+  #config.vm.box ="opscode-centos-6.6"
   #config.vm.box ="opscode-centos-7.0"
   #config.vm.box  ="opscode-debian-7.7"
   
@@ -100,7 +100,7 @@ Vagrant.configure("2") do |config|
       #"recipe[yum-epel]",
       "recipe[rsc_memcached::default]",
       "recipe[rsc_memcached::tags]",
-      #"recipe[rsc_memcached::collectd]"
+      "recipe[rsc_memcached::collectd]"
     ]
   end
 end

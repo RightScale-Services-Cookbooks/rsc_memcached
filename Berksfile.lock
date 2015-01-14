@@ -53,11 +53,8 @@
     "application": {
       "locked_version": "4.1.4"
     },
-    "rightscale_tag": {
-      "locked_version": "1.0.5"
-    },
     "machine_tag": {
-      "locked_version": "1.0.6"
+      "locked_version": "1.0.8"
     },
     "memcached": {
       "locked_version": "1.7.2"

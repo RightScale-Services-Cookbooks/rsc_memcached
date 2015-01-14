@@ -7,4 +7,3 @@ bin/*
 
 .kitchen/
 .kitchen.local.yml
-/recipes/collectd.rb

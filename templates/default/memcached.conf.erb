@@ -1,0 +1,8 @@
+LoadPlugin memcached
+
+<Plugin "memcached">
+    <Instance "<%= @options[:instance_uuid]%>">
+        Host <%= @options[:host] %>
+        Port <%= @options[:port] %>
+    </Instance>
+</Plugin>
