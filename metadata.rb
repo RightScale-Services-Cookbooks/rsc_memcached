@@ -18,7 +18,9 @@ depends 'memcached', '~> 1.7.2'
 recipe 'rsc_memcached::default', 'Installs/configures a memcached server'
 recipe 'rsc_memcached::tags', 'Sets up tags for finding the memcached server'
 recipe 'rsc_memcached::collectd', 'Sets up collectd monitoring for the memcached server'
-
+recipe 'rsc_memcached::do_start', 'start memcache service'
+recipe 'rsc_memcached::do_restart', 'resstart memcache service'
+recipe 'rsc_memcached::do_stop', 'stop memcache service'
 
 
 attribute 'rsc_memcached/bind_network_interface',
@@ -40,13 +42,15 @@ attribute 'memcached/memory',
 attribute 'memcached/port',
   :display_name => 'Memcached Listen Port',
   :description => 'TCP port for memcached to listen on, defaults to 11211',
-  :required => 'required',
+    :default => '11211',
+  :required => 'optional',
   :recipes => ['rsc_memcached::default']
 
 attribute 'memcached/udp_port',
   :display_name => 'Memcached udp_port',
   :description => 'UDP port for memcached to listen on, defaults to 11211',
-  :required => 'required',
+      :default => '11211',
+  :required => 'optional',
   :recipes => ['rsc_memcached::default']
 
 attribute 'memcached/user',

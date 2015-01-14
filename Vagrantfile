@@ -100,7 +100,10 @@ Vagrant.configure("2") do |config|
       #"recipe[yum-epel]",
       "recipe[rsc_memcached::default]",
       "recipe[rsc_memcached::tags]",
-      "recipe[rsc_memcached::collectd]"
+      "recipe[rsc_memcached::collectd]",
+       "recipe[rsc_memcached::do_stop]",
+       "recipe[rsc_memcached::do_start]",
+        "recipe[rsc_memcached::do_restart]"
     ]
   end
 end
