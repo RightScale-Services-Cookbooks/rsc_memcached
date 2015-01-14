@@ -1,0 +1,72 @@
+{
+  "sources": {
+    "rsc_memcached": {
+      "path": "."
+    },
+    "collectd": {
+      "locked_version": "1.1.0",
+      "git": "git://github.com/rightscale-cookbooks-contrib/chef-collectd.git",
+      "ref": "ec50609ed6eb193e0411f30aced91befa571940f"
+    },
+    "driveclient": {
+      "locked_version": "1.0.0",
+      "git": "git://github.com/rightscale/rackspace_cookbooks.git",
+      "ref": "c8647c9f47ea2e69ca11f5a2e35cc2e728d0892b",
+      "rel": "driveclient"
+    },
+    "cloudmonitoring": {
+      "locked_version": "0.1.5",
+      "git": "git://github.com/rightscale/rackspace_cookbooks.git",
+      "ref": "c8647c9f47ea2e69ca11f5a2e35cc2e728d0892b",
+      "rel": "cloudmonitoring"
+    },
+    "sysctl": {
+      "locked_version": "0.0.1",
+      "git": "git://github.com/rs-services/cookbooks_internal.git",
+      "ref": "80f8ce1b2ed22881efce5b8e52f0f7c8d6d389bf",
+      "rel": "cookbooks/sysctl"
+    },
+    "rightscale": {
+      "locked_version": "13.5.0",
+      "git": "git://github.com/rightscale/rightscale_cookbooks.git",
+      "ref": "abf601cca2161222887e5fc2a002c8ae372b83e9",
+      "rel": "cookbooks/rightscale"
+    },
+    "sys_dns": {
+      "locked_version": "13.5.0",
+      "git": "git://github.com/rightscale/rightscale_cookbooks.git",
+      "ref": "abf601cca2161222887e5fc2a002c8ae372b83e9",
+      "rel": "cookbooks/sys_dns"
+    },
+    "apt": {
+      "locked_version": "2.6.0"
+    },
+    "yum-epel": {
+      "locked_version": "0.4.0"
+    },
+    "yum": {
+      "locked_version": "3.3.2"
+    },
+    "marker": {
+      "locked_version": "1.0.1"
+    },
+    "application": {
+      "locked_version": "4.1.4"
+    },
+    "rightscale_tag": {
+      "locked_version": "1.0.5"
+    },
+    "machine_tag": {
+      "locked_version": "1.0.6"
+    },
+    "memcached": {
+      "locked_version": "1.7.2"
+    },
+    "runit": {
+      "locked_version": "1.5.10"
+    },
+    "build-essential": {
+      "locked_version": "1.4.4"
+    }
+  }
+}
