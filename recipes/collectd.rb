@@ -32,10 +32,6 @@ require 'chef/rewind'
 
 log 'Installing memcached collectd plugin...'
 
-package 'collectd-memcached' do
-  only_if { node['platform_family'] == 'rhel' }
-end
-
 include_recipe 'collectd::default'
 
 # collectd::default recipe attempts to delete collectd plugins that were not
