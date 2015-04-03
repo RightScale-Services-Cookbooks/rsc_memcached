@@ -44,6 +44,8 @@ end
 
 log "Setting up monitoring for memcached..."
 
+package "ruby" #ruby is needed for the plugin.
+
 template "/etc/collectd/plugins/memcached_listener_plugin" do
   source "memcached_listen_disabled_num_plugin.erb"
   mode "0755"
