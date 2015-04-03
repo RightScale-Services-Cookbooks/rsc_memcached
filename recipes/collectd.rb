@@ -44,13 +44,24 @@ end
 
 log "Setting up monitoring for memcached..."
 
-# Set up haproxy monitoring
+template "/etc/collectd/plugins/memcached_listener_plugin" do
+  source "memcached_listen_disabled_num_plugin.erb"
+  mode "0755"
+  variables(
+    :tcp_port => node['memcached']['port'].to_i,
+  )
+  cookbook 'rsc_memcached'
+end
+
+# Set up memcached monitoring
 collectd_plugin 'memcached' do
   template 'memcached.conf.erb'
   cookbook 'rsc_memcached'
   options({
-    :host =>   node['cloud']['private_ips'].first,
-    :instance_uuid => node['rightscale']['instance_uuid'],
-    :port =>node['memcached']['port'].to_i
-  })
+      :host =>   node['cloud']['private_ips'].first,
+      :port =>node['memcached']['port'].to_i,
+      :user => node["memcached"]["user"],
+      :location => "/etc/collectd/plugins/memcached_listener_plugin",
+      :uuid => node["rightscale"]["instance_uuid"]
+    })
 end
