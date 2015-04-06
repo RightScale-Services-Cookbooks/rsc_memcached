@@ -51,6 +51,7 @@ template "/etc/collectd/plugins/memcached_listener_plugin" do
   mode "0755"
   variables(
     :tcp_port => node['memcached']['port'].to_i,
+    :host =>  node['cloud']['private_ips'].first,
   )
   cookbook 'rsc_memcached'
 end
