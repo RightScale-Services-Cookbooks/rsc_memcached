@@ -1,69 +1,29 @@
-{
-  "sources": {
-    "rsc_memcached": {
-      "path": "."
-    },
-    "collectd": {
-      "locked_version": "1.1.0",
-      "git": "git://github.com/rightscale-cookbooks-contrib/chef-collectd.git",
-      "ref": "ec50609ed6eb193e0411f30aced91befa571940f"
-    },
-    "driveclient": {
-      "locked_version": "1.0.0",
-      "git": "git://github.com/rightscale/rackspace_cookbooks.git",
-      "ref": "c8647c9f47ea2e69ca11f5a2e35cc2e728d0892b",
-      "rel": "driveclient"
-    },
-    "cloudmonitoring": {
-      "locked_version": "0.1.5",
-      "git": "git://github.com/rightscale/rackspace_cookbooks.git",
-      "ref": "c8647c9f47ea2e69ca11f5a2e35cc2e728d0892b",
-      "rel": "cloudmonitoring"
-    },
-    "sysctl": {
-      "locked_version": "0.0.1",
-      "git": "git://github.com/rs-services/cookbooks_internal.git",
-      "ref": "80f8ce1b2ed22881efce5b8e52f0f7c8d6d389bf",
-      "rel": "cookbooks/sysctl"
-    },
-    "rightscale": {
-      "locked_version": "13.5.0",
-      "git": "git://github.com/rightscale/rightscale_cookbooks.git",
-      "ref": "abf601cca2161222887e5fc2a002c8ae372b83e9",
-      "rel": "cookbooks/rightscale"
-    },
-    "sys_dns": {
-      "locked_version": "13.5.0",
-      "git": "git://github.com/rightscale/rightscale_cookbooks.git",
-      "ref": "abf601cca2161222887e5fc2a002c8ae372b83e9",
-      "rel": "cookbooks/sys_dns"
-    },
-    "apt": {
-      "locked_version": "2.6.0"
-    },
-    "yum-epel": {
-      "locked_version": "0.4.0"
-    },
-    "yum": {
-      "locked_version": "3.3.2"
-    },
-    "marker": {
-      "locked_version": "1.0.1"
-    },
-    "application": {
-      "locked_version": "4.1.4"
-    },
-    "machine_tag": {
-      "locked_version": "1.0.8"
-    },
-    "memcached": {
-      "locked_version": "1.7.2"
-    },
-    "runit": {
-      "locked_version": "1.5.10"
-    },
-    "build-essential": {
-      "locked_version": "1.4.4"
-    }
-  }
-}
+DEPENDENCIES
+  collectd
+    git: git://github.com/rightscale-cookbooks-contrib/chef-collectd.git
+    revision: ec50609ed6eb193e0411f30aced91befa571940f
+    branch: generalize_install_for_both_centos_and_ubuntu
+  memcached (~> 3.0.0)
+  rsc_memcached
+    path: .
+    metadata: true
+
+GRAPH
+  apt (3.0.0)
+  collectd (1.1.0)
+  compat_resource (12.10.4)
+  marker (1.0.1)
+  memcached (3.0.0)
+    compat_resource (>= 12.9.0)
+    runit (>= 1.2.0)
+    yum-epel (>= 0.0.0)
+  packagecloud (0.2.0)
+  rsc_memcached (2.0.0)
+    apt (>= 0.0.0)
+    marker (~> 1.0.1)
+    yum (>= 0.0.0)
+  runit (1.7.8)
+    packagecloud (>= 0.0.0)
+  yum (3.10.0)
+  yum-epel (0.7.0)
+    yum (>= 3.6.3)

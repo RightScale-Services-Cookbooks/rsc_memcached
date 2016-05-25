@@ -4,15 +4,12 @@ maintainer_email 'cookbooks@rightscale.com'
 license          'Apache 2.0'
 description      'Installs/Configures memcached server'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '1.1.0'
+version          '2.0.0'
 
 depends 'yum'
 depends 'apt'
 depends 'marker', '~> 1.0.1'
-depends 'application' ,'~> 4.1.4'
-depends 'collectd', '~> 1.1.0'
-depends 'machine_tag', '~> 1.0.8'
-depends 'memcached', '~> 1.7.2'
+
 
 
 recipe 'rsc_memcached::default', 'Installs/configures a memcached server'
